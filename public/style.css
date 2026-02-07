@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-100:#FFD369;
+    --primary-200:#EEEEEE;
+    --primary-300:#fdf6fd;
+    --accent-100:#cfdbd5;
+    --accent-200:#e8eddf;
+    --text-100:#EEEEEE;
+    --text-200:#FDEBED;
+    --bg-100:#222831;
+    --bg-200:#393E46;
+    --bg-300:#292524;
+}
+
+body {
+    font-family: "Gajraj One", sans-serif;
+    background-color: var(--bg-100);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+header {
+    background-color: var(--primary-100);
+    color: var(--bg-200);
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+header .logo {
+    height: 4rem;
+}
+
+main {
+    background-color: var(--primary-300);
+    flex-grow: 1;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.jokes {
+    flex-grow: 1;
+    max-height: 63vh;
+    overflow-y: scroll;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 0.5rem;
+    padding-top: 0.5rem;
+    padding-bottom: 1rem;
+}
+
+form {
+    display: flex;
+    gap: 0.3rem;
+}
+
+form input {
+    flex-grow: 1;
+    border: none;
+    background-color: var(--bg-100);
+    padding: 0.5rem;
+    border-radius: 1rem;
+}
+
+form button {
+    border: none;
+    padding: 1rem;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+.joke {
+    background-color: var(--bg-300);
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+.jokes .buttons {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 0.3rem;
+}
+
+.joke button {
+    border: none;
+    background-color: #222831;
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+}
