@@ -21,6 +21,13 @@ let server = http.createServer((req, res)=>{
                 res.end()
                 return
             }
+            if(req.url.startsWith("/dislike") && req.method == "GET"){
+                let params = url.parse(req.url, true).query
+                let id = params.id 
+                dislike(id)
+                res.end()
+                return
+            }
             notFound(req, res)
     }
 })
